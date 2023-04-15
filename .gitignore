@@ -1,0 +1,5 @@
+.env
+assets/
+google-cloud-sdk/
+__pycache__/
+.DS_Store
