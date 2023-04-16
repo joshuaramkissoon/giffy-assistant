@@ -2,6 +2,7 @@ from langchain import SerpAPIWrapper, LLMChain
 from langchain.agents import ZeroShotAgent, Tool, AgentExecutor
 from langchain.llms import OpenAI
 from langchain.memory import ConversationBufferMemory
+from langchain.utilities import WikipediaAPIWrapper
 import logging
 
 PROMPT_PREFIX = """Have a conversation with a human, answering the following questions as best you can. You have access to the following tools:"""
@@ -15,12 +16,18 @@ class Agent:
     
     def __init__(self):
         search = SerpAPIWrapper()
+        wikipedia = WikipediaAPIWrapper()
         tools = [
             Tool(
                 name="Intermediate Answer",
                 func=search.run,
                 description="useful for when you need to ask with search"
-            )
+            ),
+            Tool(
+                name="Wiki",
+                func=wikipedia.run,
+                description="Search for information on wikipedia"
+            ),
         ]
         
         prompt = ZeroShotAgent.create_prompt(

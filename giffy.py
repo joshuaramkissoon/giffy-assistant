@@ -1,6 +1,8 @@
 import logging
 import os
 from dotenv import load_dotenv
+
+from agent import Agent
 from assistant import GiffyAssistant
 
 # Load env variables
@@ -15,6 +17,7 @@ logging.basicConfig(level=logging.INFO, format=log_format, datefmt="%Y-%m-%dT%H:
 # Get a logger instance
 logger = logging.getLogger(__name__)
 
+
 if __name__ == "__main__":
-    gf = GiffyAssistant()
+    gf = GiffyAssistant(agent=Agent())
     gf.start()
