@@ -42,7 +42,7 @@ ELEVENLABS_API_KEY=your_elevenlabs_api_key
 
 ## Quick Usage
 
-To start the Giffy Assistant, run the following command:
+To start Giffy, run the following command:
 
 ```bash
 python3 giffy.py
