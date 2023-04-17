@@ -1,6 +1,6 @@
 # Giffy 🦒
 
-Giffy is a voice assistant leveraging speech-to-text, text-to-speech, and generative agents for lively, engaging chats. It also exposes an interface that can be used to interact with any generative agent as if it were human (i.e. via speech) and benefits from the continuous extension of supported tools.
+Giffy is a voice assistant leveraging speech-to-text, text-to-speech, and generative agents for lively, engaging chats. It exposes an interface that can be used to interact with any generative agent as if it were human (i.e. via speech) and benefits from the continuous extension of supported tools.
 
 ## Getting Started
 
